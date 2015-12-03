@@ -64,13 +64,6 @@ scale = 1;
 % subplot(224); stem(Hi_R); 
 % title('Reconstruction high-pass filter'); 
 
-[LL,LH,HL,HH]=dwt2(input_image,'haar');%bior4.4
-figure(3);
-subplot(2,2,1);imshow(uint8(LL/2));title('LL band of image');
-subplot(2,2,2);imshow(LH);title('LH band of image');
-subplot(2,2,3);imshow(HL);title('HL band of image');
-subplot(2,2,4);imshow(HH);title('HH band of image');
-
 temp = 128*ones(128,128);
 [swa,swh,swv,swd]= swt2(input_image,1,'rbio2.2');%temp
 figure;
